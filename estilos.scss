@@ -1,0 +1,370 @@
+body {
+    h1 {
+        font-style: italic;
+        align-content: center;
+        text-align: center;
+        animation-duration: 2s;
+        animation-name: aparecer;
+    }
+
+  
+
+    @keyframes aparecer {
+        0% {
+            opacity: 0;
+        }
+
+        100% {
+            opacity: 1;
+        }
+    }
+ $color: rojo;
+
+ p{
+     @if($color == azuloscuro) {
+         color: blue;
+     } @else {
+         color: red;        
+     }
+ }
+
+
+
+    h2 {
+        font-style: italic;
+        text-align: center;
+    }
+
+    h3 {
+        font-style: italic;
+        align-content: center;
+        text-align: center;
+    }
+
+    .container-fluid {
+        display: grid;
+        color:darkblue;
+        background-color: whitesmoke;
+        width: 100%;
+        max-width: 100%;
+        height: 100%;
+        margin: 1px;
+        padding: 100px;
+        border: solid 1px white;
+        align-content: center;
+        text-align: center;
+    }
+
+    #logo {
+        grid-area: logo;
+        display: flex;
+        flex-direction: row;
+        align-content: center;
+        text-align: center;
+    }
+
+    .trabajar {
+        grid-area: trabajar;
+        display: grid;
+        justify-content: space-around;
+        align-content: stretch;
+        align-items: center;
+        width: 100%;
+        grid-template-columns: 30% 30% 30%;
+        text-align: center;
+    }
+
+    .trabajar div {
+        display: block;
+        position: relative;
+        width: 100% 100% 100%;
+        height: 30%;
+        object-fit: cover;
+    }
+
+    .trabajarnos {
+        grid-area: trabajarnos;
+        text-align: center;
+        width: 100%;
+        height: 100px;
+    }
+
+    @mixin razon {
+        flex-basis: 333px;
+        height: 230px;
+        width: 100%;
+        float: left;
+        padding: 20px;
+        border: solid 1px;
+        box-sizing: border-box;
+        position: relative;
+    }
+
+    #razon1 {
+        @include razon;
+    }
+
+
+
+    #razon2 {
+        @include razon;
+    }
+
+    #razon3 {
+        @include razon;
+    }
+
+    @each $inversion in casa1, casa2, casa3 {
+        .#{$inversion}-icon { 
+              Background-image:  
+               url('/images/#{inversion}.png');
+         }
+     } /*animal tendrá los valores de cada uno */
+
+
+ 
+     
+    .adquisiciones div {
+        background-color: black;
+        font-size: 21px;
+        padding: 2px;
+        justify-content: space-around;
+    }
+    @mixin nuevaadquisicion{
+        width: 30%;
+        float: initial;
+        padding: 10px;
+        border: solid 1px;
+        box-sizing: border-box;
+        position: relative;
+    }
+    #nuevaAdquisicion1 {
+       @include nuevaadquisicion;
+    }
+
+    .casa1 {
+        display: block;
+        position: relative;
+        width: 100%;
+        height: 200px;
+        object-fit: cover;
+    }
+
+    #nuevaAdquisicion2 {
+       @include nuevaadquisicion;
+    }
+
+    #nuevaAdquisicion3 {
+      @include nuevaadquisicion;
+    }
+
+    .img {
+        max-width: 100%;
+        max-height: 100%;
+        float: left;
+        padding: 20px;
+        border: solid 1px;
+        box-sizing: border-box;
+    }
+
+    a.button {
+        -webkit-appearance: button;
+        -moz-appearance: button;
+        text-decoration: none;
+        color: initial;
+    }
+
+    #nuevosproyectos {
+        grid-area: nuevosproyectos;
+        background-image: url(Desktop/XCAPITAL/XCAPITAL-INICIO/imagenes/casa.jpg);
+        text-align: center;
+        background-repeat: no-repeat;
+        width: 100%;
+        height: 250px;
+    }
+
+    #botonesnv {
+        background-color: none;
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        align-items: center;
+        width: 95%;
+        height: 60%
+    }
+
+
+    #nuestrofundador {
+        grid-area: nuestrofundador;
+        background-color: whitesmoke;
+        text-align: center;
+        width: 100%;
+        height: 250px;
+    }
+
+    #historia {
+        grid-area: historia;
+        background-color: none;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+        width: 95%;
+        height: 60%
+    }
+
+    .invertir {
+        grid-area: adquisiciones;
+        display: grid;
+        justify-content: space-around;
+        align-content: stretch;
+        align-items: center;
+        width: 100%;
+        grid-template-columns: 90%;
+        text-align: center;
+    }
+
+    .invertir div {
+        background-color: whitesmoke;
+        font-size: 21px;
+        padding: 2px;
+        justify-content: space-around
+    }
+
+
+
+    .container {
+        width: 100%;
+        padding-right: 15px;
+        padding-left: 15px;
+        margin-right: auto;
+        margin-left: auto;
+    }
+
+    .noticias .noticias-item .info {
+        display: inline-block;
+        vertical-align: top;
+        width: calc(100% - 225px);
+        padding-left: 15px;
+    }
+
+    .noticias .noticias-item {
+        display: block;
+        position: relative;
+    }
+
+    .row {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+        margin-right: -15px;
+        margin-left: -15px;
+    }
+
+    .noticias div {
+        background-color: whitesmoke;
+        font-size: 21px;
+        padding: 2px;
+        justify-content: space-around
+    }
+
+
+    ul {
+        list-style: none;
+        font-size: 0;
+        padding: 0;
+        flex-basis: 30%
+    }
+
+    li {
+        display: inline-block;
+        width: 25%;
+        position: relative
+    }
+
+    ul ul li {
+        width: 100%;
+    }
+
+    ul ul {
+        padding: 0px;
+        position: absolute;
+        display: none
+    }
+
+    ul li:hover ul {
+        display: block
+    }
+
+    a {
+        display: block;
+        font-size: 14px;
+        text-align: center;
+        color: black;
+        background-color: none;
+        padding: 10px;
+        text-transform: uppercase;
+        text-decoration: none;
+        font-family: sans-serif
+    }
+
+    .faq {
+        text-align: center;
+    }
+
+
+    a:hover {
+        background-color: mediumblue;
+    }
+
+
+    .Preguntas {
+        grid-area: adquisiciones;
+        display: grid;
+        justify-content: space-around;
+        align-content: stretch;
+        align-items: center;
+        background-image: url(imagenes/faq.jpg);
+        background-repeat: no-repeat;
+        width: 100%;
+        height: 30%;
+    }
+
+    .pregunta1 {
+        grid-area: adquisiciones;
+        display: grid;
+        justify-content: space-around;
+        align-content: stretch;
+        align-items: center;
+    }
+
+    .footer {
+        grid-area: footer;
+        text-align: center;
+        width: 100%;
+        height: 100px;
+    }
+
+    .error:hover, .error--serious:hover {
+        background-color: #fee;
+    }
+
+    .error--serious {
+        border-width: 3px;
+    }
+}
+$redes: ( /*Declaramos nuestro mapa*/
+        twitter: #55acee,
+        facebook:  #3a5795,
+        send-mail: #611f00
+); 
+/*Creamos el bucle para usar los valores del mapa*/
+@each $red, $color in $redes {
+   .btn--#{$red} {
+       background-color: $color;
+   }
+}
